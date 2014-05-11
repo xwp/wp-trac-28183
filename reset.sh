@@ -35,5 +35,3 @@ wp  --allow-root core install \
 	--admin_user=admin \
 	--admin_password=password \
 	--admin_email=admin@example.com
-
-#--extra-php="define( 'WP_CONTENT_DIR', __DIR__ . '/content' ); define( 'WP_CONTENT_URL', 'http://$SITE_HOST/content' );"
