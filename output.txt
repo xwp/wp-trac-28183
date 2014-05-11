@@ -1,0 +1,85 @@
+Reset database
+Downloading WordPress 3.8.3 (en_US)...
+Using cached file '/home/vagrant/.wp-cli/cache/core/en_US-3.8.3.tar.gz'...
+Success: WordPress downloaded.
+Success: Generated wp-config.php file.
+Success: WordPress installed successfully.
+Logging in to WordPress
+Accessing the widgets page
+Resetting themes' widgets
+Update twentythirteen widgets
+Success: Switched to 'Twenty Thirteen' theme.
+Success: Updated 'sidebars_widgets' option.
+Update twentyfourteen widgets
+Success: Switched to 'Twenty Fourteen' theme.
+Success: Updated 'sidebars_widgets' option.
+Make sure that twentyfourteen widgets are restored... pass
+Success: Switched to 'Twenty Thirteen' theme.
+twentyfourteen theme mod for sidebars_widgets populated as expected
+twentythirteen theme mod for sidebars_widgets empty as expected
+Make sure that twentythirteen widgets are restored... pass
+Success: Switched to 'Twenty Fourteen' theme.
+
+
+Upgrade to WordPress 3.9:
+Unpacking the update...
+Success: WordPress updated successfully.
+Confirm that widgets are still intact after upgrade... pass
+Preview twentythirteen
+Make sure that twentyfourteen widgets are now corrupted due to logic bug... pass
+Confirm that the previewed theme widgets are now applied to the active theme due to logic bug... pass
+twentyfourteen theme mod for sidebars_widgets empty as expected, due to logic error
+twentythirteen theme mod for sidebars_widgets empty as expected
+Resetting themes' widgets
+Update twentythirteen widgets
+Success: Switched to 'Twenty Thirteen' theme.
+Success: Updated 'sidebars_widgets' option.
+Update twentyfourteen widgets
+Success: Switched to 'Twenty Fourteen' theme.
+Success: Updated 'sidebars_widgets' option.
+
+
+Upgrade to WordPress 3.9.1:
+Unpacking the update...
+Success: WordPress updated successfully.
+Sidebars widgets remained intact after upgrade to 3.9.1
+twentyfourteen theme mod for sidebars_widgets still populated as expected, due to logic error in 3.9
+twentythirteen theme mod for sidebars_widgets still populated as expected, due to logic error in 3.9
+Resetting themes' widgets
+Update twentythirteen widgets
+Success: Switched to 'Twenty Thirteen' theme.
+Success: Updated 'sidebars_widgets' option.
+Update twentyfourteen widgets
+Success: Switched to 'Twenty Fourteen' theme.
+Success: Updated 'sidebars_widgets' option.
+Success: Switched to 'Twenty Fourteen' theme.
+twentyfourteen theme mod for sidebars_widgets now empty as expected
+twentythirteen theme mod for sidebars_widgets now populated as expected
+Success: Switched to 'Twenty Thirteen' theme.
+twentythirteen theme mod for sidebars_widgets now empty as expected
+twentyfourteen theme mod for sidebars_widgets now populated as expected
+Success: Switched to 'Twenty Fourteen' theme.
+Preview twentythirteen
+Make sure that twentyfourteen widgets now do not get corrupted... pass
+Confirm that the twentyfourteen widgets still applied... pass
+Success: Switched to 'Twenty Thirteen' theme.
+Preview twentyfourteen
+Make sure that twentythirteen widgets now do not get corrupted... pass
+Confirm that the twentythirteen widgets still applied... pass
+Success: Switched to 'Twenty Fourteen' theme.
+Confirm that the twentyfourteen widgets still applied... pass
+
+
+Make sure that twentyfourteen theme upgrade keeps widgets intact
+Enabling Maintenance mode...
+Downloading update from https://wordpress.org/themes/download/twentyfourteen.1.1.zip...
+Using cached file '/home/vagrant/.wp-cli/cache/theme/twentyfourteen-1.1.zip'...
+Unpacking the update...
+Installing the latest version...
+Removing the old version of the theme...
+Theme updated successfully.
+Disabling Maintenance mode...
+Success: Updated 1/1 themes.
+Widgets intact after theme upgrade
+
+Tests pass
