@@ -4,14 +4,24 @@ cd "$(dirname $0)"
 
 source db-creds.sh
 
+echo "Reset database"
+mysql -u root -proot -e "DROP DATABASE IF EXISTS $DB_NAME;"
+mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS $DB_NAME CHARACTER SET $DB_CHARSET"
+mysql -u root -proot -e "GRANT ALL PRIVILEGES ON $DB_NAME.* TO $DB_USER@localhost IDENTIFIED BY '$DB_PASSWORD';"
+
 if [ -e www ]; then
-	wp --allow-root --path=www/ db reset --yes
 	rm -r www
 fi
 
-mkdir www
+# Note: Using /tmp on Vagrant for a great speed up since no synced folders
+if [ -e /tmp/trac-28183-www ]; then
+	rm -r /tmp/trac-28183-www
+fi
+mkdir /tmp/trac-28183-www
+ln -s /tmp/trac-28183-www www
 cd www
 wp --allow-root core download --version=3.8.3
+
 
 wp  --allow-root core config \
 	--dbname=$DB_NAME \
